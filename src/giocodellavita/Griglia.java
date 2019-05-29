@@ -56,7 +56,12 @@ public class Griglia {
     }
     
     public void verificaAdiacienti(){
-        boolean org[][] = grid;
+        boolean org[][] = new boolean[grid.length][grid.length];
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[i].length;j++){
+                org[i][j]=grid[i][j];
+            }
+        }
         int cont;
         for(int i=0;i<org.length;i++){
             for(int j=0;j<org[i].length;j++){
@@ -65,11 +70,13 @@ public class Griglia {
                     for(int y = j-1;y<=j+1;y++){
                         if(x>=0 && x<=org.length-1 && y>=0 && y<=org.length-1){
                             if(org[x][y]){
-                                System.out.println(x + " " +y);
                                 cont++;
                             }
                         }
                     }
+                }
+                if(org[i][j]){
+                    cont--;
                 }
                 if(org[i][j]==false && cont==3){
                     grid[i][j]=true;

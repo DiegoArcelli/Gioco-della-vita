@@ -33,7 +33,7 @@ public class Finestra extends JFrame implements ActionListener, MouseListener {
         this.setLayout(bl);
         JPanel mappa = new JPanel();
         JPanel control = new JPanel();
-        grid = new Griglia(10);
+        grid = new Griglia(225);
         grid.popolaGriglia();
         cells = new JLabel[grid.getLenght()][grid.getLenght()];
         gl = new GridLayout(grid.getLenght(),grid.getLenght());
