@@ -33,8 +33,8 @@ public class Griglia {
         int p;
         for(int i=0;i<grid.length;i++){
             for(int j=0;j<grid[i].length;j++){
-                p=r.nextInt(101);
-                if(p<prob){
+                p=r.nextInt(100)+1;
+                if(p<=prob){
                     grid[i][j]=true;
                 } else {
                     grid[i][j]=false;
