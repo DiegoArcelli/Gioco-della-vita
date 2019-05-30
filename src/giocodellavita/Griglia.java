@@ -92,9 +92,6 @@ public class Griglia {
                         }
                     }
                 }
-                /*if(org[i][j]){
-                    cont--;
-                }*/
                 if(org[i][j]==false && cont==3){
                     grid[i][j]=true;
                 } else if(org[i][j] && (cont==2 || cont==3)){
