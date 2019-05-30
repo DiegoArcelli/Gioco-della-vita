@@ -8,8 +8,9 @@ package giocodellavita;
 import javax.swing.JFrame;
 
 /**
- *
+ * <b>Applicazione che implementa l'automa di Conway</b>
  * @author diego
+ * @version 1.0
  */
 public class GiocoDellaVita {
 
