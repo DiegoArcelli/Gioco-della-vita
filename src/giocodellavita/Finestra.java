@@ -51,21 +51,29 @@ public class Finestra extends JFrame implements ActionListener, MouseListener {
                 }
             }
         }
+        GridLayout pulsantiera = new GridLayout(2,4);
+        control.setLayout(pulsantiera);
+        JLabel labelDelay = new JLabel("Inserire delay:");
+        JLabel labelProb = new JLabel("Inserire probabilità:");
+        labelProb.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
+        labelDelay.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
         step = new JButton("Step");
         step.addActionListener(this);
-        control.add(step);
         start = new JButton("Start");
         start.addActionListener(this);
-        control.add(start);
         stop = new JButton("Stop");
         stop.addActionListener(this);
-        control.add(stop);
         create = new JButton("Create");
         create.addActionListener(this);
-        control.add(create);
         prob = new JTextField("Inserire probabilità");
-        control.add(prob);
         delay = new JTextField("Inserire delay");
+        control.add(create);
+        control.add(start);
+        control.add(labelProb);
+        control.add(prob);
+        control.add(step);
+        control.add(stop);
+        control.add(labelDelay);
         control.add(delay);
         this.add(mappa, BorderLayout.CENTER);
         this.add(control, BorderLayout.NORTH);
