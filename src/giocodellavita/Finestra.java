@@ -51,7 +51,7 @@ public class Finestra extends JFrame implements ActionListener, MouseListener {
                 }
             }
         }
-        GridLayout pulsantiera = new GridLayout(2,4);
+        GridLayout pulsantiera = new GridLayout(2,4,10,10);
         control.setLayout(pulsantiera);
         JLabel labelDelay = new JLabel("Inserire delay:");
         JLabel labelProb = new JLabel("Inserire probabilità:");
